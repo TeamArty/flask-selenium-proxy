@@ -20,4 +20,4 @@ def index():
     
     global driver
     driver.get(request.args.get("url"))
-    return driver.page_source
+    return flask.Response(driver.page_source, mimetype="text/plain")
