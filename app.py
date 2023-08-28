@@ -31,13 +31,13 @@ def cai():
     
     global driver
     driver.get("https://beta.character.ai/chat?char=" + id)
-    javascript = '''var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://beta.character.ai/chat/character/info/', false);
-    xhr.setRequestHeader('Content-type', 'application/json');
-    xhr.setRequestHeader('Authorization', 'Token be4699378133b71855e683d63eba698f0f0d870c');
-    xhr.send('{"external_id":"''' + id + '''"}');
-    return xhr.response;
-    '''
-    result = driver.execute_script(javascript);
-    
-    return result
+    return driver.page_source
+    #javascript = '''var xhr = new XMLHttpRequest();
+    #xhr.open('POST', 'https://beta.character.ai/chat/character/info/', false);
+    #xhr.setRequestHeader('Content-type', 'application/json');
+    #xhr.setRequestHeader('Authorization', 'Token be4699378133b71855e683d63eba698f0f0d870c');
+    #xhr.send('{"external_id":"''' + id + '''"}');
+    #return xhr.response;
+    #'''
+    #result = driver.execute_script(javascript)
+    #return result
