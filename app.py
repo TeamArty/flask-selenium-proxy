@@ -23,7 +23,7 @@ def get():
     return flask.Response(driver.page_source, mimetype="text/plain")
 
 # > GET /cai
-@app.post("/cai")
+@app.get("/cai")
 def post():
     if request.args.get("id", None) == None:
         return flask.Response("No id Specified", mimetype="text/plain")
