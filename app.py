@@ -24,18 +24,18 @@ def get():
 
 # > GET /cai
 @app.get("/cai")
-def post():
+def cai():
     if request.args.get("id", None) == None:
         return flask.Response("No id Specified", mimetype="text/plain")
     id = request.args.get("id", None)
     
     global driver
     driver.get("https://beta.character.ai/chat?char=" + id)
-    javascript = f'''var xhr = new XMLHttpRequest();
+    javascript = '''var xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://beta.character.ai/chat/character/info/', false);
     xhr.setRequestHeader('Content-type', 'application/json');
     xhr.setRequestHeader('Authorization', 'Token be4699378133b71855e683d63eba698f0f0d870c');
-    xhr.send('{"external_id":"{id}"}');
+    xhr.send('{"external_id":"''' + id + '''"}');
     return xhr.response;
     '''
     result = driver.execute_script(javascript);
