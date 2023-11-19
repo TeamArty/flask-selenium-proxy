@@ -6,13 +6,13 @@ import undetected_chromedriver as uc
 
 # > Define Flask App
 app     = Flask(__name__)
-options = webdriver.ChromeOptions()
-options.add_argument("--no-sandbox")
-options.add_argument("--headless")
-options.add_argument("--disable-dev-shm-usage")
-options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36')
-driver  = webdriver.Chrome(options=options)
-print(options.binary_location)
+#options = webdriver.ChromeOptions()
+#options.add_argument("--no-sandbox")
+#options.add_argument("--headless")
+#options.add_argument("--disable-dev-shm-usage")
+#options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36')
+#driver  = webdriver.Chrome(options=options)
+#print(options.binary_location)
 
 options = uc.ChromeOptions()
 options.binary_location = "/opt/render/.cache/selenium/chrome/linux64/119.0.6045.105/chrome"
