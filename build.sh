@@ -17,6 +17,7 @@ else
 fi
 
 ls /opt/render/project/.render/chrome/opt/google/chrome
+which chromedriver
 # > IMPORTANT - set this as the build command:
 # export PATH="${PATH}:/opt/render/project/.render/chrome/opt/google/chrome"; ./build.sh;
 export PATH="${PATH}:/opt/render/project/.render/chrome/opt/google/chrome"

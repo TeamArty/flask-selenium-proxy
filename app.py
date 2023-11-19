@@ -14,7 +14,7 @@ options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) App
 driver  = webdriver.Chrome(options=options)
 
 options = uc.ChromeOptions()
-options.binary_location = "/opt/render/project/.render/chrome/opt/google/chrome/chrome"
+options.binary_location = "/opt/render/project/.render/chrome/opt/google/chrome/google-chrome"
 test = uc.Chrome(options=options)
 
 # > GET /
